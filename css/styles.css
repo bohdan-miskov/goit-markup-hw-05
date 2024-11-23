@@ -450,30 +450,6 @@ address {
     border-color:  #31d0aa;
 }
 
-.blue-btn{
-    display: block;
-    min-width: 169px;
-    height: 56px;
-    font-family: inherit;
-    background: #4d5ae5;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    line-height: 1.5;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 16px 32px;
-    text-align: center;
-    margin: 0 auto;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.blue-btn:hover,
-.blue-btn:focus{
-    background-color: #404bbf;
-}
-
 .subscribe-btn {
     background: #4d5ae5;
     font-weight: 500;
@@ -488,9 +464,13 @@ address {
     min-width: 165px;
     padding: 8px 24px;
     display: flex;
-    gap: 16px;
     align-items: center;
+    justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.telegram-subscribe-icon{
+    margin-left: 16px;
 }
 
 .subscribe-btn:hover,
@@ -535,6 +515,7 @@ address {
     background: #fcfcfc;
     border-radius: 4px;
     padding: 24px;
+    padding-top: 72px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: transform;
 }
@@ -568,7 +549,6 @@ address {
 }
 
 .modal-text {
-    margin-top:48px;
     font-weight: 500;
     text-align: center;
     color: #2e2f42;
@@ -576,13 +556,18 @@ address {
 }
 
 .modal-form-label {
+    display: block;
     font-size: 12px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    margin-bottom: 4px;
 }
 .modal-form-wrapper {
     position: relative;
+}
+
+.modal-form-field{
     margin-bottom: 8px;
 }
 
@@ -595,7 +580,8 @@ address {
     height: 40px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: border;
-    outline: none;
+    outline: transparent;
+    background-color: transparent;
 }
 
 .modal-form-input:focus-visible,
@@ -610,8 +596,9 @@ address {
 
 .modal-input-icon {
     position: absolute;
-    top: 8px;
+    top: 50%;
     left: 16px;
+    transform:  translateY(-50%); 
     fill: #2e2f42;
     pointer-events: none;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -662,6 +649,7 @@ address {
 
 .modal-checkbox-icon{
     fill: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-checkbox:checked + .modal-form-label > .modal-checkbox-mark{
@@ -686,6 +674,15 @@ address {
 
 .modal-form-send-btn {
     margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-send-btn:hover,
+.modal-form-send-btn:focus{
+    border: none;
 }
 
 /* #endregion */
